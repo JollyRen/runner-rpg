@@ -8,7 +8,8 @@ Npc.init(
     //create db info
   },
   {
-    modelName: 'Program',
+    timestamps: false,
+    modelName: 'npc',
   }
 )
 

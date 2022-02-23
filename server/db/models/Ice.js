@@ -8,7 +8,8 @@ Ice.init(
     //create db info
   },
   {
-    modelName: 'Program',
+    timestamps: false,
+    modelName: 'ice',
   }
 )
 

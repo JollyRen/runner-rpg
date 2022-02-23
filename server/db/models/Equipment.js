@@ -8,7 +8,8 @@ Equipment.init(
     //create db info
   },
   {
-    modelName: 'Equipment',
+    timestamps: false,
+    modelName: 'equipment',
   }
 )
 
