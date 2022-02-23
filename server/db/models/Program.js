@@ -29,6 +29,10 @@ Program.init(
       defaultValue: 0,
       allowNull: false,
     },
+    description: {
+      type: DataTypes.TEXT,
+      defaultValue: '',
+    },
   },
   {
     timestamps: false,
