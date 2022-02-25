@@ -12,7 +12,11 @@ Program.init(
       allowNull: false,
     },
     type: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
+      // type: DataTypes.ARRAY(DataTypes.STRING),
+      type: DataTypes.STRING,
+      validate: {
+        isIn: [['Killer', 'Decryptor', 'Wallbreaker']],
+      },
     },
     memorySize: {
       type: DataTypes.INTEGER,
@@ -33,6 +37,18 @@ Program.init(
       type: DataTypes.TEXT,
       defaultValue: '',
     },
+    // isActive: {
+    //   type: DataTypes.BOOLEAN,
+    //   defaultValue: false,
+    // },
+    // isInstalled: {
+    //   type: DataTypes.BOOLEAN,
+    //   defaultValue: false,
+    // },
+    // isTrashed: {
+    //   type: DataTypes.BOOLEAN,
+    //   defaultValue: false,
+    // },
   },
   {
     timestamps: false,
