@@ -1,13 +1,30 @@
 import React, { useEffect } from 'react'
+import axios from 'axios'
 import { useActions, usePrograms, useSelector } from './store/hooks'
+import { getPrograms } from './store/reducer'
 import SingleProgram from './SingleProgram'
 
-const ProgramList = () => {
+const Programs = () => {
   const programs = usePrograms()
   const bits = useSelector((state) => state.bits)
   const { addProgram } = useActions()
 
-  return (
+  // useEffect(() => {getPrograms()}, [])
+
+  // useEffect(() => {
+  //     return async (dispatch) => {
+  //       try {
+  //         const { data: programs } = await axios.get('/api/programs')
+  //         dispatch(setPrograms(programs))
+  //       } catch (err) {
+  //         console.log('No Project')
+  //       }
+  //     }
+  // }, [])
+
+  return !programs ? (
+    <p>No Programs</p>
+  ) : (
     <div>
       {programs.map((program) => (
         <SingleProgram
@@ -22,3 +39,5 @@ const ProgramList = () => {
     </div>
   )
 }
+
+export default Programs

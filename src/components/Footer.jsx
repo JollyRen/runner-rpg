@@ -6,12 +6,12 @@ import {
   ACTIVE_PROGRAM,
   ALL_PROGRAMS,
 } from './store/constants'
-import { useActions, useIceVisibilityFilter, useProgramVisibilityFilter } from './store/hooks'
+import { useActions, useIceVisibilityFilter, useProgVisibilityFilter } from './store/hooks'
 
 const Footer = () => {
   const { setVisibilityFilter } = useActions()
   const iceVisFilter = useIceVisibilityFilter()
-  const progVisFilter = useProgramVisibilityFilter()
+  const progVisFilter = useProgVisibilityFilter()
 
   return (
     <footer>
