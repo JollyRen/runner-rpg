@@ -1,9 +1,8 @@
 const { Sequelize, DataTypes, Model } = require('sequelize')
 const db = require('../database')
 
-class Program extends Model {}
-
-Program.init(
+const Program = db.define(
+  'program',
   {
     //create db info
     name: {
@@ -52,7 +51,6 @@ Program.init(
   },
   {
     timestamps: false,
-    modelName: 'program',
   }
 )
 

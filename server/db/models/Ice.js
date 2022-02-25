@@ -1,9 +1,8 @@
 const { Sequelize, DataTypes, Model } = require('sequelize')
 const db = require('../database')
 
-class Ice extends Model {}
-
-Ice.init(
+const Ice = db.define(
+  'ice',
   {
     //create db info
     title: {
@@ -31,7 +30,6 @@ Ice.init(
   },
   {
     timestamps: false,
-    modelName: 'ice',
   }
 )
 

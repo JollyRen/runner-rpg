@@ -41,9 +41,9 @@ export const useIces = () => {
 export const usePrograms = () => {
   const programs = useSelector((state) => state.programs)
   const progVisFilter = useProgVisibilityFilter()
-  const showActiveProgram = ices.filter((program) => program.isActive)
-  const showAllPrograms = ices.filter((program) => !program.isInstalled)
-  const showTrashedPrograms = ices.filter((program) => program.isTrashed)
+  const showActiveProgram = programs.filter((program) => program.isActive)
+  const showAllPrograms = programs.filter((program) => !program.isInstalled)
+  const showTrashedPrograms = programs.filter((program) => program.isTrashed)
 
   switch (progVisFilter) {
     case ACTIVE_PROGRAM:

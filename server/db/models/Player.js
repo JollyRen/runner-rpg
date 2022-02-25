@@ -1,9 +1,8 @@
 const { Sequelize, DataTypes, Model } = require('sequelize')
 const db = require('../database')
 
-class Player extends Model {}
-
-Player.init(
+const Player = db.define(
+  'player',
   {
     //create db info
     name: {
@@ -41,7 +40,6 @@ Player.init(
   },
   {
     timestamps: false,
-    modelName: 'player',
   }
 )
 

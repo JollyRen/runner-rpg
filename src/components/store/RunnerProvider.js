@@ -7,6 +7,7 @@ export const DispatchContext = createContext()
 export const initialState = {
   iceVisFilter: ALL_ICES,
   progVisFilter: ALL_PROGRAMS,
+  activeProgram: 0,
 
   // dataFort: {},
   // // index within ices array within datafort
@@ -22,7 +23,8 @@ export const initialState = {
   currentProgramStrength: 0, // currStr >= link ? link : currStr
 
   runnerLvl: 1,
-  bits: 10,
+  bits: 15,
+  memory: 5,
 
   // // strength modifier. Upper limit of your program strength.
   linkStrength: 0, // runnerLvl + bitsSpent + deckBuff
